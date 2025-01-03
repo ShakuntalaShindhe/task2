@@ -8,7 +8,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5050/api/productTask')
+                const response = await axios.get('https://task2-gdg2.onrender.com/api/products')
                 setProducts(response.data)
             } catch (err) {
                 console.log('error', err)
@@ -19,7 +19,7 @@ const Home = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5050/api/productTask/${id}`)
+            await axios.delete(`https://task2-gdg2.onrender.com/api/products/${id}`)
             setProducts(product.filter((item) => item._id !== id))
         } catch (error) {
             console.log('Error in deleting', error)

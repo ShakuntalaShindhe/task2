@@ -12,7 +12,7 @@ const Add = () => {
     const handleSubmit= async(e)=>{
         e.preventDefault()
         try{
-            await axios.post(`http://localhost:5050/api/productTask`,{name,price,description})
+            await axios.post(`https://task2-gdg2.onrender.com/api/products`,{name,price,description})
             navigate('/')
         }catch(err){
             console.log("Error in Adding the Books",err)
