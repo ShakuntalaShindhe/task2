@@ -35,6 +35,7 @@ const Home = () => {
                         <th>Name</th>
                         <th>Price</th>
                         <th>Description</th>
+                        <th>Category</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +44,7 @@ const Home = () => {
                             <td>{item.name}</td>
                             <td>{item.price}</td>
                             <td>{item.description}</td>
+                            <td>{item.category}</td>
                             <td>
                                 <button onClick={() => handleDelete(item._id)}>Delete</button>
                                 <Link to={`/edit/${item._id}`}>Edit</Link>
